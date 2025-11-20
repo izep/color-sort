@@ -49,11 +49,13 @@
 ## 🎮 Game Features
 
 ### How It Works
-- **6 color options**: Red, Teal, Blue, Coral, Mint, Yellow
-- **3 difficulty levels**:
-  - Easy: 3 colors, 5 tubes
-  - Medium: 4 colors, 6 tubes
-  - Hard: 5 colors, 7 tubes
+- **8 color options**: Red, Green, Blue, Yellow, Magenta, Cyan, Orange, Purple
+- **4 difficulty levels**:
+  - Easy: 4 colors, 6 tubes
+  - Medium: 5 colors, 7 tubes
+  - Hard: 6 colors, 8 tubes
+  - Expert: 7 colors, 9 tubes
+- **Bright, distinct colors**: Highly visible and easy to differentiate
 - **Smart pouring**: Multiple same-colored liquids pour at once
 - **Visual feedback**: Tubes lift when selected
 - **Win detection**: Automatic when all tubes are sorted
@@ -165,12 +167,20 @@ public/
 ✅ Offline support
 ✅ TypeScript type safety
 ✅ Responsive design
-✅ Three difficulty levels
+✅ Four difficulty levels (Easy/Medium/Hard/Expert)
+✅ Bright, distinct colors
 ✅ Move counter
 ✅ Win detection
 ✅ Smooth animations
 ✅ Production-ready build
+✅ **Deployed to GitHub Pages**
 
 ---
 
-**The Color Sort PWA is complete and ready to deploy!** 🎉
+## 🌐 Live Deployment
+
+**URL:** https://izep.github.io/color-sort
+**Repository:** https://github.com/izep/color-sort
+**Hosting:** GitHub Pages
+
+**The Color Sort PWA is complete, deployed, and ready to play!** 🎉

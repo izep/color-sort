@@ -2,17 +2,17 @@
 
 A Progressive Web App (PWA) color sorting puzzle game built with React and TypeScript.
 
-## 🎮 Live Demo
+## 🎮 Play Now
 
-The app is now running at: http://localhost:3000
+**Live Demo:** https://izep.github.io/color-sort
 
 ## ✨ Features
 
 - 🎮 Engaging puzzle gameplay - sort colors into tubes
 - 📱 Responsive design - works on all devices (mobile, tablet, desktop)
 - 🚀 Progressive Web App - installable and works offline
-- 🎯 Three difficulty levels (Easy, Medium, Hard)
-- 🎨 Beautiful gradient UI with smooth animations
+- 🎯 Four difficulty levels (Easy, Medium, Hard, Expert)
+- 🎨 Bright, distinct colors for better visibility
 - ⚡ Fast and responsive
 - 💾 Offline support with service worker
 - 📦 Installable on mobile and desktop
@@ -46,48 +46,29 @@ Opens at http://localhost:3000
 npm run build
 ```
 
-### Test production build locally
+### Deploy to GitHub Pages
 ```bash
-npx serve -s build
+npm run deploy
 ```
-
-## 📱 PWA Installation
-
-### On Mobile (iOS/Android)
-1. Open the app in your browser
-2. Tap the "Share" or "Menu" button
-3. Select "Add to Home Screen"
-4. The app will appear as a standalone app icon
-
-### On Desktop (Chrome/Edge)
-1. Open the app in your browser
-2. Look for the install icon in the address bar
-3. Click "Install"
-4. The app will open in its own window
-
-## 🛠️ PWA Features
-
-- ✅ Installable on mobile devices and desktop
-- ✅ Works offline after first visit
-- ✅ Fast loading with service worker caching
-- ✅ Standalone app experience (no browser UI)
-- ✅ App manifest with theme colors
-- ✅ Responsive and mobile-optimized
-
-## 📦 Technologies Used
-
-- **React 18** - UI library
-- **TypeScript** - Type safety
-- **CSS3** - Styling with animations and gradients
-- **Service Workers** - PWA offline functionality
-- **Web App Manifest** - PWA metadata
 
 ## 🎨 Game Features
 
 ### Difficulty Levels
-- **Easy (3 colors):** 3 colors, 5 tubes total
-- **Medium (4 colors):** 4 colors, 6 tubes total  
-- **Hard (5 colors):** 5 colors, 7 tubes total
+- **Easy (4 colors):** 4 colors, 6 tubes total
+- **Medium (5 colors):** 5 colors, 7 tubes total  
+- **Hard (6 colors):** 6 colors, 8 tubes total
+- **Expert (7 colors):** 7 colors, 9 tubes total
+
+### Color Palette
+Bright, highly distinct colors:
+- 🔴 Bright Red
+- 🟢 Bright Green
+- 🔵 Bright Blue
+- 🟡 Bright Yellow
+- 🟣 Magenta
+- 🔵 Cyan
+- 🟠 Orange
+- 🟣 Purple
 
 ### Visual Features
 - Beautiful purple gradient background
@@ -121,25 +102,46 @@ color-sort/
 
 ## 🚢 Deployment
 
-The app can be deployed to any static hosting service:
+This app is deployed on **GitHub Pages**: https://izep.github.io/color-sort
 
-### Netlify
+To deploy your own version:
 ```bash
-npm run build
-# Drag and drop 'build' folder to Netlify
+npm run deploy
 ```
 
-### Vercel
-```bash
-npm run build
-vercel --prod
-```
+See [DEPLOYMENT.md](DEPLOYMENT.md) for other deployment options.
 
-### GitHub Pages
-```bash
-npm run build
-# Use gh-pages package or GitHub Actions
-```
+## 📱 PWA Installation
+
+### On Mobile (iOS/Android)
+1. Open https://izep.github.io/color-sort in your browser
+2. Tap the "Share" or "Menu" button
+3. Select "Add to Home Screen"
+4. The app will appear as a standalone app icon
+
+### On Desktop (Chrome/Edge)
+1. Open https://izep.github.io/color-sort in your browser
+2. Look for the install icon in the address bar
+3. Click "Install"
+4. The app will open in its own window
+
+## 🛠️ PWA Features
+
+- ✅ Installable on mobile devices and desktop
+- ✅ Works offline after first visit
+- ✅ Fast loading with service worker caching
+- ✅ Standalone app experience (no browser UI)
+- ✅ App manifest with theme colors
+- ✅ Responsive and mobile-optimized
+
+## 📦 Technologies Used
+
+- **React 19** - UI library
+- **TypeScript 4.9** - Type safety
+- **CSS3** - Styling with animations and gradients
+- **Service Workers** - PWA offline functionality
+- **Web App Manifest** - PWA metadata
+- **GitHub Pages** - Hosting
 
 ## 🎓 Learning Resources
 
@@ -152,6 +154,7 @@ This project demonstrates:
 - Progressive Web App implementation
 - Service Worker registration
 - Responsive design
+- GitHub Pages deployment
 
 ## 📝 License
 
@@ -159,4 +162,4 @@ MIT
 
 ---
 
-**Enjoy sorting colors! 🎨**
+**Play now at: https://izep.github.io/color-sort 🎨**

@@ -2,7 +2,23 @@
 
 ## 🚀 Quick Deploy Options
 
-### Option 1: Netlify (Recommended - Easiest)
+### ⭐ GitHub Pages (Currently Deployed)
+
+**Live at:** https://izep.github.io/color-sort
+
+**Deploy updates:**
+```bash
+npm run deploy
+```
+
+This will:
+1. Build the production version
+2. Push to `gh-pages` branch
+3. Auto-deploy to GitHub Pages
+
+---
+
+### Option 2: Netlify (Recommended Alternative)
 
 1. **Build the app:**
    ```bash
@@ -28,7 +44,33 @@
 
 ---
 
-### Option 2: Vercel
+### Option 3: GitHub Pages (Currently Used)
+
+**Already configured!** The app is live at: https://izep.github.io/color-sort
+
+1. **Update package.json (already done):**
+   ```json
+   {
+     "homepage": "https://izep.github.io/color-sort",
+     "scripts": {
+       "predeploy": "npm run build",
+       "deploy": "gh-pages -d build"
+     }
+   }
+   ```
+
+2. **Deploy:**
+   ```bash
+   npm run deploy
+   ```
+
+3. **Auto-deployment:**
+   - Every `npm run deploy` updates the live site
+   - Changes go live in ~1 minute
+
+---
+
+### Option 4: Vercel
 
 1. **Install Vercel CLI:**
    ```bash
@@ -48,32 +90,7 @@
 
 ---
 
-### Option 3: GitHub Pages
-
-1. **Install gh-pages:**
-   ```bash
-   npm install --save-dev gh-pages
-   ```
-
-2. **Add to package.json:**
-   ```json
-   {
-     "homepage": "https://yourusername.github.io/color-sort",
-     "scripts": {
-       "predeploy": "npm run build",
-       "deploy": "gh-pages -d build"
-     }
-   }
-   ```
-
-3. **Deploy:**
-   ```bash
-   npm run deploy
-   ```
-
----
-
-### Option 4: Firebase Hosting
+### Option 5: Firebase Hosting
 
 1. **Install Firebase CLI:**
    ```bash
@@ -95,7 +112,7 @@
 
 ---
 
-### Option 5: AWS Amplify
+### Option 6: AWS Amplify
 
 1. **Install Amplify CLI:**
    ```bash
@@ -112,7 +129,7 @@
 
 ---
 
-### Option 6: Render
+### Option 7: Render
 
 1. **Create `render.yaml`:**
    ```yaml
@@ -201,7 +218,28 @@ Settings → Pages → Custom domain
 
 ---
 
-## 🎯 Recommended: Netlify
+## 🎯 Current Deployment: GitHub Pages
+
+**Live URL:** https://izep.github.io/color-sort
+
+**Repository:** https://github.com/izep/color-sort
+
+**Why GitHub Pages?**
+- ✅ Free hosting
+- ✅ Automatic HTTPS
+- ✅ Simple deployment (`npm run deploy`)
+- ✅ Perfect for static PWAs
+- ✅ No configuration needed
+- ✅ Fast global CDN
+
+**Update the live site:**
+```bash
+npm run deploy
+```
+
+---
+
+## 🎯 Recommended Alternative: Netlify
 
 **Why Netlify?**
 - ✅ Drag-and-drop deployment
