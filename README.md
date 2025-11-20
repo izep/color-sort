@@ -16,6 +16,10 @@ A Progressive Web App (PWA) color sorting puzzle game built with React and TypeS
 - ⚡ Fast and responsive
 - 💾 Offline support with service worker
 - 📦 Installable on mobile and desktop
+- 🎬 **Sand pouring animations** when moving colors
+- 🎵 **Sound effects** for pouring and celebrations
+- ✨ **Celebration animations** when completing a tube
+- 🎉 **Big celebration** when winning the game
 
 ## 🎯 How to Play
 
@@ -54,10 +58,10 @@ npm run deploy
 ## 🎨 Game Features
 
 ### Difficulty Levels
-- **Easy (4 colors):** 4 colors, 6 tubes total
-- **Medium (5 colors):** 5 colors, 7 tubes total  
-- **Hard (6 colors):** 6 colors, 8 tubes total
-- **Expert (7 colors):** 7 colors, 9 tubes total
+- **Easy (4 colors):** 4 colors, 6 tubes, 4 slots per tube
+- **Medium (5 colors):** 5 colors, 7 tubes, 4 slots per tube
+- **Hard (6 colors):** 6 colors, 8 tubes, 4 slots per tube
+- **Expert (7 colors):** 7 colors, 9 tubes, **5 slots per tube** 🔥
 
 ### Color Palette
 Bright, highly distinct colors:
@@ -72,10 +76,19 @@ Bright, highly distinct colors:
 
 ### Visual Features
 - Beautiful purple gradient background
-- Smooth hover and click animations
+- **Smooth sand-pouring animations** when moving colors
+- **Shake animation** when pouring from a tube
+- **Fill animation** when receiving colors
 - Color tubes with realistic pouring effect
+- **Sparkle celebration** when completing a tube
+- **Confetti animation** when winning
 - Win celebration message
 - Move counter
+
+### Audio Features
+- 🎵 **Pour sound** - Descending tone when pouring colors
+- 🎵 **Tube complete sound** - Cheerful chord when finishing a tube
+- 🎵 **Victory melody** - Uplifting tune when winning the game
 
 ## 📂 Project Structure
 

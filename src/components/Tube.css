@@ -2,6 +2,7 @@
   cursor: pointer;
   padding: 8px;
   transition: transform 0.2s;
+  position: relative;
 }
 
 .tube:hover {
@@ -10,6 +11,35 @@
 
 .tube.selected {
   transform: translateY(-10px);
+}
+
+.tube.pouring {
+  animation: shake 0.6s ease-in-out;
+}
+
+.tube.receiving {
+  animation: fill 0.6s ease-in-out;
+}
+
+.tube.complete {
+  animation: celebrate 0.8s ease-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateY(-10px) rotate(0deg); }
+  25% { transform: translateY(-15px) rotate(-5deg); }
+  75% { transform: translateY(-15px) rotate(5deg); }
+}
+
+@keyframes fill {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes celebrate {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1) rotate(-5deg); }
+  75% { transform: scale(1.1) rotate(5deg); }
 }
 
 .tube-container {
@@ -22,12 +52,14 @@
   flex-direction: column;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .color-slot {
   flex: 1;
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .color-slot.empty {
@@ -35,7 +67,72 @@
 }
 
 .color-slot.filled {
-  transition: background-color 0.3s;
+  animation: pourIn 0.6s ease-out;
+}
+
+@keyframes pourIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.completion-burst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: gold;
+  border-radius: 50%;
+  animation: burst 0.8s ease-out forwards;
+}
+
+.sparkle:nth-child(1) {
+  animation-delay: 0s;
+  --angle: 0deg;
+}
+
+.sparkle:nth-child(2) {
+  animation-delay: 0.1s;
+  --angle: 90deg;
+}
+
+.sparkle:nth-child(3) {
+  animation-delay: 0.2s;
+  --angle: 180deg;
+}
+
+.sparkle:nth-child(4) {
+  animation-delay: 0.3s;
+  --angle: 270deg;
+}
+
+@keyframes burst {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(
+      calc(cos(var(--angle)) * 50px),
+      calc(sin(var(--angle)) * 50px)
+    ) scale(0);
+    opacity: 0;
+  }
 }
 
 @media (max-width: 768px) {

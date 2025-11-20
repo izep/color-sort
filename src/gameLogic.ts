@@ -13,10 +13,10 @@ export const COLORS = [
 
 export const createInitialGame = (difficulty: number = 4): GameState => {
   const numColors = difficulty;
-  const tubeCapacity = 4;
+  const tubeCapacity = difficulty >= 7 ? 5 : 4; // Expert mode has 5 slots per tube
   const colors = COLORS.slice(0, numColors);
   
-  // Create array with 4 of each color
+  // Create array with tubeCapacity of each color
   const allColors: string[] = [];
   colors.forEach(color => {
     for (let i = 0; i < tubeCapacity; i++) {
@@ -91,4 +91,10 @@ export const checkWin = (tubes: Tube[]): boolean => {
     if (tube.colors.length !== tube.maxCapacity) return false;
     return tube.colors.every(color => color === tube.colors[0]);
   });
+};
+
+export const isTubeComplete = (tube: Tube): boolean => {
+  if (tube.colors.length === 0) return false;
+  if (tube.colors.length !== tube.maxCapacity) return false;
+  return tube.colors.every(color => color === tube.colors[0]);
 };

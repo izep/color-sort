@@ -43,7 +43,7 @@
 ### Build Status
 ✅ Development build: **Compiled successfully**
 ✅ Production build: **Compiled successfully**
-✅ Bundle size: 62.74 kB (gzipped)
+✅ Bundle size: 63.32 kB (gzipped)
 ✅ No errors or warnings
 
 ## 🎮 Game Features
@@ -51,13 +51,23 @@
 ### How It Works
 - **8 color options**: Red, Green, Blue, Yellow, Magenta, Cyan, Orange, Purple
 - **4 difficulty levels**:
-  - Easy: 4 colors, 6 tubes
-  - Medium: 5 colors, 7 tubes
-  - Hard: 6 colors, 8 tubes
-  - Expert: 7 colors, 9 tubes
+  - Easy: 4 colors, 6 tubes, 4 slots per tube
+  - Medium: 5 colors, 7 tubes, 4 slots per tube
+  - Hard: 6 colors, 8 tubes, 4 slots per tube
+  - Expert: 7 colors, 9 tubes, **5 slots per tube**
 - **Bright, distinct colors**: Highly visible and easy to differentiate
 - **Smart pouring**: Multiple same-colored liquids pour at once
-- **Visual feedback**: Tubes lift when selected
+- **Visual feedback**: 
+  - Tubes lift when selected
+  - Shake animation when pouring
+  - Fill animation when receiving
+  - Pour animation with smooth transitions
+  - Sparkle burst when tube is complete
+  - Confetti when game is won
+- **Audio feedback**:
+  - Pour sound effect
+  - Tube completion celebration sound
+  - Victory melody on win
 - **Win detection**: Automatic when all tubes are sorted
 
 ### Game Rules

@@ -6,14 +6,17 @@ interface TubeProps {
   tube: TubeType;
   isSelected: boolean;
   onClick: () => void;
+  isPouring?: boolean;
+  isReceiving?: boolean;
+  isComplete?: boolean;
 }
 
-const Tube: React.FC<TubeProps> = ({ tube, isSelected, onClick }) => {
+const Tube: React.FC<TubeProps> = ({ tube, isSelected, onClick, isPouring, isReceiving, isComplete }) => {
   const emptySlots = tube.maxCapacity - tube.colors.length;
   
   return (
     <div 
-      className={`tube ${isSelected ? 'selected' : ''}`}
+      className={`tube ${isSelected ? 'selected' : ''} ${isPouring ? 'pouring' : ''} ${isReceiving ? 'receiving' : ''} ${isComplete ? 'complete' : ''}`}
       onClick={onClick}
     >
       <div className="tube-container">
@@ -28,6 +31,14 @@ const Tube: React.FC<TubeProps> = ({ tube, isSelected, onClick }) => {
           />
         ))}
       </div>
+      {isComplete && (
+        <div className="completion-burst">
+          <div className="sparkle"></div>
+          <div className="sparkle"></div>
+          <div className="sparkle"></div>
+          <div className="sparkle"></div>
+        </div>
+      )}
     </div>
   );
 };
