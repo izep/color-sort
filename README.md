@@ -13,6 +13,7 @@ A Progressive Web App (PWA) color sorting puzzle game built with React and TypeS
 - 🚀 Progressive Web App - installable and works offline
 - 🎯 Four difficulty levels (Easy, Medium, Hard, Expert)
 - 🎨 Bright, distinct colors for better visibility
+- ♿ **Colorblind accessibility mode** with patterns and labels
 - ⚡ Fast and responsive
 - 💾 Offline support with service worker
 - 📦 Installable on mobile and desktop
@@ -65,14 +66,29 @@ npm run deploy
 
 ### Color Palette
 Bright, highly distinct colors:
-- 🔴 Bright Red
-- 🟢 Bright Green
-- 🔵 Bright Blue
-- 🟡 Bright Yellow
-- 🟣 Magenta
-- 🔵 Cyan
-- 🟠 Orange
-- 🟣 Purple
+- 🔴 Bright Red (R)
+- 🟢 Bright Green (G)
+- 🔵 Bright Blue (B)
+- 🟡 Bright Yellow (Y)
+- 🟣 Magenta (M)
+- 🔵 Cyan (C)
+- 🟠 Orange (O)
+- 🟣 Purple (P)
+
+### Accessibility Features
+**Colorblind Mode** - Toggle with the "👁️ Patterns" button:
+- **Letter labels** (R, G, B, Y, M, C, O, P) on each color
+- **Unique patterns** for each color:
+  - Red: Solid
+  - Green: Dots
+  - Blue: Diagonal stripes
+  - Yellow: Grid
+  - Magenta: Diagonal (opposite direction)
+  - Cyan: Waves
+  - Orange: Circles
+  - Purple: Crosshatch
+- Patterns remain visible even during animations
+- Helps players with all types of color blindness (Deuteranopia, Protanopia, Tritanopia)
 
 ### Visual Features
 - Beautiful purple gradient background
@@ -154,7 +170,9 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for other deployment options.
 - **CSS3** - Styling with animations and gradients
 - **Service Workers** - PWA offline functionality
 - **Web App Manifest** - PWA metadata
+- **Web Audio API** - Sound effects generation
 - **GitHub Pages** - Hosting
+- **Accessibility patterns** - Colorblind support
 
 ## 🎓 Learning Resources
 
@@ -168,6 +186,8 @@ This project demonstrates:
 - Service Worker registration
 - Responsive design
 - GitHub Pages deployment
+- **Accessibility patterns for colorblind users**
+- **Web Audio API for sound generation**
 
 ## 📝 License
 

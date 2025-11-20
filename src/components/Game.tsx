@@ -5,7 +5,7 @@ import Tube from './Tube';
 import './Game.css';
 
 const Game: React.FC = () => {
-  const [gameState, setGameState] = useState<GameState>(createInitialGame(5));
+  const [gameState, setGameState] = useState<GameState>(createInitialGame(5, false));
   const [difficulty, setDifficulty] = useState(5);
   const [pouringFrom, setPouringFrom] = useState<number | null>(null);
   const [pouringTo, setPouringTo] = useState<number | null>(null);
@@ -107,12 +107,13 @@ const Game: React.FC = () => {
             newTubes[fromIndex] = from;
             newTubes[tubeId] = to;
 
-            setGameState({
+            setGameState(prev => ({
+              ...prev,
               tubes: newTubes,
               selectedTube: null,
-              moves: gameState.moves + 1,
+              moves: prev.moves + 1,
               isWon: false
-            });
+            }));
 
             setPouringFrom(null);
             setPouringTo(null);
@@ -137,10 +138,17 @@ const Game: React.FC = () => {
   const handleNewGame = (newDifficulty?: number) => {
     const diff = newDifficulty ?? difficulty;
     setDifficulty(diff);
-    setGameState(createInitialGame(diff));
+    setGameState(createInitialGame(diff, gameState.colorblindMode));
     setCompletedTubes(new Set());
     setPouringFrom(null);
     setPouringTo(null);
+  };
+
+  const toggleColorblindMode = () => {
+    setGameState(prev => ({
+      ...prev,
+      colorblindMode: !prev.colorblindMode
+    }));
   };
 
   return (
@@ -167,6 +175,7 @@ const Game: React.FC = () => {
             isPouring={pouringFrom === tube.id}
             isReceiving={pouringTo === tube.id}
             isComplete={completedTubes.has(tube.id)}
+            colorblindMode={gameState.colorblindMode}
             onClick={() => handleTubeClick(tube.id)}
           />
         ))}
@@ -174,6 +183,13 @@ const Game: React.FC = () => {
 
       <div className="controls">
         <button onClick={() => handleNewGame()}>New Game</button>
+        <button 
+          onClick={toggleColorblindMode}
+          className={gameState.colorblindMode ? 'active' : ''}
+          title="Toggle colorblind accessibility mode"
+        >
+          {gameState.colorblindMode ? '👁️ Patterns ON' : '👁️ Patterns OFF'}
+        </button>
         <div className="difficulty-controls">
           <label>Difficulty:</label>
           <button 

@@ -11,7 +11,29 @@ export const COLORS = [
   '#9900FF'  // Purple
 ];
 
-export const createInitialGame = (difficulty: number = 4): GameState => {
+export const COLOR_PATTERNS = [
+  'solid',      // Red
+  'dots',       // Green
+  'stripes',    // Blue
+  'grid',       // Yellow
+  'diagonal',   // Magenta
+  'waves',      // Cyan
+  'circles',    // Orange
+  'crosshatch'  // Purple
+];
+
+export const COLOR_LABELS = [
+  'R',  // Red
+  'G',  // Green
+  'B',  // Blue
+  'Y',  // Yellow
+  'M',  // Magenta
+  'C',  // Cyan
+  'O',  // Orange
+  'P'   // Purple
+];
+
+export const createInitialGame = (difficulty: number = 4, colorblindMode: boolean = false): GameState => {
   const numColors = difficulty;
   const tubeCapacity = difficulty >= 7 ? 5 : 4; // Expert mode has 5 slots per tube
   const colors = COLORS.slice(0, numColors);
@@ -48,7 +70,8 @@ export const createInitialGame = (difficulty: number = 4): GameState => {
     tubes,
     selectedTube: null,
     moves: 0,
-    isWon: false
+    isWon: false,
+    colorblindMode
   };
 };
 

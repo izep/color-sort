@@ -9,4 +9,5 @@ export interface GameState {
   selectedTube: number | null;
   moves: number;
   isWon: boolean;
+  colorblindMode: boolean;
 }
