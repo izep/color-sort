@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/color-sort/static/css/main.65102507.css",
+    "main.js": "/color-sort/static/js/main.57e5fdf4.js",
+    "static/js/453.6e090639.chunk.js": "/color-sort/static/js/453.6e090639.chunk.js",
+    "index.html": "/color-sort/index.html",
+    "main.65102507.css.map": "/color-sort/static/css/main.65102507.css.map",
+    "main.57e5fdf4.js.map": "/color-sort/static/js/main.57e5fdf4.js.map",
+    "453.6e090639.chunk.js.map": "/color-sort/static/js/453.6e090639.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65102507.css",
+    "static/js/main.57e5fdf4.js"
+  ]
+}
