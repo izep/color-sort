@@ -1,0 +1,123 @@
+.game {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.game-header h1 {
+  margin: 0;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.game-stats {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.win-message {
+  background: #4CAF50;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.tubes-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+  max-width: 800px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.controls button {
+  background: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.controls button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.controls button:active {
+  transform: translateY(0);
+}
+
+.difficulty-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.difficulty-controls button {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+}
+
+.difficulty-controls button.active {
+  background: #4CAF50;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .game-header h1 {
+    font-size: 2rem;
+  }
+
+  .tubes-container {
+    gap: 10px;
+  }
+
+  .controls {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .difficulty-controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

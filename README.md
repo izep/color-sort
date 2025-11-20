@@ -1,46 +1,162 @@
-# Getting Started with Create React App
+# Color Sort Game 🎨
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Progressive Web App (PWA) color sorting puzzle game built with React and TypeScript.
 
-## Available Scripts
+## 🎮 Live Demo
 
-In the project directory, you can run:
+The app is now running at: http://localhost:3000
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 🎮 Engaging puzzle gameplay - sort colors into tubes
+- 📱 Responsive design - works on all devices (mobile, tablet, desktop)
+- 🚀 Progressive Web App - installable and works offline
+- 🎯 Three difficulty levels (Easy, Medium, Hard)
+- 🎨 Beautiful gradient UI with smooth animations
+- ⚡ Fast and responsive
+- 💾 Offline support with service worker
+- 📦 Installable on mobile and desktop
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🎯 How to Play
 
-### `npm test`
+1. **Click on a tube** to select it (it will lift up)
+2. **Click on another tube** to pour the colors
+3. **Rules:**
+   - You can only pour if the target tube is empty, OR
+   - The top color matches the target tube's top color
+   - All consecutive colors of the same type pour at once
+4. **Goal:** Sort all colors so each tube contains only one color
+5. **Strategy:** Use the two empty tubes wisely!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Quick Start
 
-### `npm run build`
+### Install dependencies
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Run development server
+```bash
+npm start
+```
+Opens at http://localhost:3000
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Build for production
+```bash
+npm run build
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Test production build locally
+```bash
+npx serve -s build
+```
 
-### `npm run eject`
+## 📱 PWA Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### On Mobile (iOS/Android)
+1. Open the app in your browser
+2. Tap the "Share" or "Menu" button
+3. Select "Add to Home Screen"
+4. The app will appear as a standalone app icon
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### On Desktop (Chrome/Edge)
+1. Open the app in your browser
+2. Look for the install icon in the address bar
+3. Click "Install"
+4. The app will open in its own window
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🛠️ PWA Features
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- ✅ Installable on mobile devices and desktop
+- ✅ Works offline after first visit
+- ✅ Fast loading with service worker caching
+- ✅ Standalone app experience (no browser UI)
+- ✅ App manifest with theme colors
+- ✅ Responsive and mobile-optimized
 
-## Learn More
+## 📦 Technologies Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **React 18** - UI library
+- **TypeScript** - Type safety
+- **CSS3** - Styling with animations and gradients
+- **Service Workers** - PWA offline functionality
+- **Web App Manifest** - PWA metadata
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🎨 Game Features
+
+### Difficulty Levels
+- **Easy (3 colors):** 3 colors, 5 tubes total
+- **Medium (4 colors):** 4 colors, 6 tubes total  
+- **Hard (5 colors):** 5 colors, 7 tubes total
+
+### Visual Features
+- Beautiful purple gradient background
+- Smooth hover and click animations
+- Color tubes with realistic pouring effect
+- Win celebration message
+- Move counter
+
+## 📂 Project Structure
+
+```
+color-sort/
+├── public/
+│   ├── index.html          # Main HTML file
+│   ├── manifest.json       # PWA manifest
+│   ├── service-worker.js   # Service worker for offline
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── Game.tsx        # Main game component
+│   │   ├── Game.css        # Game styles
+│   │   ├── Tube.tsx        # Tube component
+│   │   └── Tube.css        # Tube styles
+│   ├── types.ts            # TypeScript interfaces
+│   ├── gameLogic.ts        # Game logic and rules
+│   ├── App.tsx             # Root component
+│   ├── index.tsx           # Entry point with SW registration
+│   └── ...
+└── package.json
+```
+
+## 🚢 Deployment
+
+The app can be deployed to any static hosting service:
+
+### Netlify
+```bash
+npm run build
+# Drag and drop 'build' folder to Netlify
+```
+
+### Vercel
+```bash
+npm run build
+vercel --prod
+```
+
+### GitHub Pages
+```bash
+npm run build
+# Use gh-pages package or GitHub Actions
+```
+
+## 🎓 Learning Resources
+
+This project demonstrates:
+- React hooks (useState, useEffect)
+- TypeScript with React
+- Component composition
+- Game state management
+- CSS animations and transitions
+- Progressive Web App implementation
+- Service Worker registration
+- Responsive design
+
+## 📝 License
+
+MIT
+
+---
+
+**Enjoy sorting colors! 🎨**
